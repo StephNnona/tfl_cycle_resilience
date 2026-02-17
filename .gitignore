@@ -1,0 +1,9 @@
+# Ignore data folders
+data_raw/
+data_clean/
+*.csv
+
+# Ignore Python environment and cache
+__pycache__/
+.env
+.DS_Store
