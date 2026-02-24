@@ -1,4 +1,7 @@
-CREATE OR REPLACE TABLE `tfl-efficiency-project.tfl_efficiency_us.fact_cycling_trip` AS
+CREATE OR REPLACE TABLE `tfl-efficiency-project.tfl_efficiency_us.fact_cycling_trip`
+PARTITION BY date_id
+CLUSTER BY start_station_id
+AS
 SELECT
     rental_id AS journey_id,
     DATE(start_date) AS date_id,
