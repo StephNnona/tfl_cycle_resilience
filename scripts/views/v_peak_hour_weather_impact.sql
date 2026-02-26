@@ -1,3 +1,5 @@
+--View: Peak Hour Weather Impact Analysis (Jan - Aug 2025)
+
 CREATE OR REPLACE VIEW `tfl-efficiency-project.tfl_efficiency_us.v_peak_hour_weather_impact` AS
 WITH hourly_trips AS (
     SELECT
@@ -23,10 +25,10 @@ SELECT
     weather_severity_level,
     avg_trips_per_hour,
     MAX(CASE                                                -- Normal weather baseline per hour
-        WHEN weather_severity_level = 'Normal Weather'
+            WHEN weather_severity_level = 'Normal Weather'
             THEN hourly_avg.avg_trips_per_hour
         END) OVER (PARTITION BY start_hour) AS normal_baseline,
-    ROUND(100 * (1 - avg_trips_per_hour/ (MAX(CASE          -- Percentage drop in average trips hour for heavy rain days vs normal weather days
+    ROUND(100 * (1 - SAFE_DIVIDE(hourly_avg.avg_trips_per_hour, MAX(CASE     -- % drop from normal baseline (positive = drop)
                             WHEN weather_severity_level = 'Normal Weather'
                             THEN hourly_avg.avg_trips_per_hour
                         END) OVER (PARTITION BY start_hour))),1
