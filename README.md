@@ -211,6 +211,14 @@ Rain appears to disproportionately reduce discretionary cycling activity while p
 
 The network contracts — but does not collapse.
 
+## Dashboard
+
+You can view the interactive dashboard here:
+
+[View Live Report](https://lookerstudio.google.com/reporting/4b5ee763-c227-440f-b46e-02fd5774f6c0)
+
+If access issues occur, please contact me.
+
 ## Operational Implications
 
 Based on observed demand elasticity patterns:
