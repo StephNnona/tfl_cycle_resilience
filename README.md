@@ -49,7 +49,7 @@ To assess behavioural elasticity and spatial resilience within the cycling netwo
    - Filtered for Greater London weather stations
 
    - Converted from:
-     - Farenheit -> Celsius
+     - Fahrenheit -> Celsius
 
      - Inches -> mm
 
@@ -109,6 +109,10 @@ dim_weather
 * etc.
 
   Note: 2025 weather data was available for January through to 24 August 2025, so weather-based analysis is limited to those months.
+
+```markdown
+The full Entity Relationship Diagram (ERD) can be found here: [View ERD](data_model/erd.md)
+```
 
 ## Data Cleaning & Quality
 
