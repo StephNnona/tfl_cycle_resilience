@@ -110,9 +110,7 @@ dim_weather
 
   Note: 2025 weather data was available for January through to 24 August 2025, so weather-based analysis is limited to those months.
 
-```markdown
 The full Entity Relationship Diagram (ERD) can be found here: [View ERD](data_model/erd.md)
-```
 
 ## Data Cleaning & Quality
 
